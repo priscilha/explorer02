@@ -11,25 +11,25 @@ Depois de criada a lista:
 
 let lista = [
     {
-        name: Júlia,
+        nome: 'Júlia',
         nota1: 10,
         nota2: 2,
     },
 
     {
-        name: Amanda,
+        nome: 'Amanda',
         nota1: 8,
         nota2: 5,
     },
 
-        {
-        name: Maria,
+    {
+        nome: 'Maria',
         nota1: 6,
         nota2: 12,
     },
 
             {
-        name: Letícia,
+        nome: 'Letícia',
         nota1: 10,
         nota2: 16,
     }
@@ -37,12 +37,16 @@ let lista = [
 
 
 
-function MediaEstudantes (nota1, nota2){
- 
-    return (nota1 + nota2) / 2
+function calculaMedia (nota1, nota2){
+let media = (nota1 + nota2) / 2
+return media
 }
 
-let media = MediaEstudantes()
+for(let estudante of lista){
+    mediaEstudante = calculaMedia (estudante.nota1, estudante.nota2)
+    let aprovadoOuNao = mediaEstudante < 7 ? 'Infelizmente não foi dessa vez. Estude mais' : 'Parabéns pela sua aprovação'
 
-alert( lista[0].nota1 )
+    alert(`A média de ${estudante.nome} é ${mediaEstudante}.
+${aprovadoOuNao}`)
+}       
 
